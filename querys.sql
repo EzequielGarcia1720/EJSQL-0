@@ -209,6 +209,13 @@
 		join canciones c on b.id = c.banda_id 
 		group by b.id 
 		having avg(c.duracion)>5;
+
+	--5
+		select b.nombre
+		from bandas b
+		where b.id not in (select distinct cm.banda_id
+			from conciertos_musicos cm
+		);
 	
 	-------------------------------
 		select nombre, lanzamiento
