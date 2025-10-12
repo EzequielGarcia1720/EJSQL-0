@@ -204,12 +204,11 @@
 			)
 		);
 	--4
-		select b.nombre 
+		select b.nombre, round(avg(c.duracion), 2) as promedio_duracion
 		from bandas b
-		where b.nombre in (select c.nombre 
-			from canciones c 
-			where avg(c.duracion)> 5)
-		group by b.id;
+		join canciones c on b.id = c.banda_id 
+		group by b.id 
+		having avg(c.duracion)>5;
 	
 	-------------------------------
 		select nombre, lanzamiento
