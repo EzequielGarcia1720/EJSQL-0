@@ -203,7 +203,13 @@
 				and cm.banda_id = b.id 
 			)
 		);
-	
+	--4
+		select b.nombre 
+		from bandas b
+		where b.nombre in (select c.nombre 
+			from canciones c 
+			where avg(c.duracion)> 5)
+		group by b.id;
 	
 	-------------------------------
 		select nombre, lanzamiento
