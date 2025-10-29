@@ -216,7 +216,66 @@
 		where b.id not in (select distinct cm.banda_id
 			from conciertos_musicos cm
 		);
+	--6
+		select a.nombre, a.ranking
+		from albumes a
+		where not exists(
+			select 1 from canciones c
+			where c.album_id = a.id and c.ranking <= 30
+		);
 	
+	--7
+		select b.nombre,
+			count (case
+				when c.ranking > 30 then 1
+			end
+			) as cantidad_rankeadas,
+			round(avg(c.ranking),2) as promedio_ranking
+		from bandas b
+		join canciones c on c.banda_id = b.id
+		group by b.id 
+		having count(case 
+			when c.ranking > 30 then 1
+		end
+		) > count (*) /2;
+
+	--8
+		select b.nombre, b.id , round(avg(c.ranking), 2) as promedio_ranking, min(c.ranking) as minimo_ranking
+		from bandas b
+		join canciones c on c.banda_id = b.id 
+		where b.id not in (
+			select c.banda_id 
+			from canciones c
+			order by c.ranking asc
+			limit 10
+		)
+		group by b.id
+		order by b.id 
+		; 
+	
+	--9
+		select 	c.nombre as "Canción",
+				c.ranking as "Ranking de cancion",
+				a.nombre as "Album",
+				a.ranking as "Ranking de album"
+		from canciones c
+		join albumes a on c.album_id = a.id 
+		where c.ranking > a.ranking
+		order by c.ranking asc;
+	
+	--10
+		select 	b.nombre as "Banda",
+				cn.nombre as "Concierto",
+				b.pais_origen as "Pais de origen de la banda"
+		from bandas b
+		join conciertos_musicos cm on b.id = cm.banda_id
+		join conciertos cn on cm.concierto_id = cn.id
+		where cn.pais = b.pais_origen 
+		;
+		
+		
+		
+		
 	-------------------------------
 		select nombre, lanzamiento
 		from albumes a 

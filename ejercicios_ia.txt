@@ -1,0 +1,63 @@
+Ejercicio 1
+Encuentra todos los libros que contengan la palabra "amor" en el título.
+
+Ejercicio 2
+Busca clientes cuyos nombres empiecen con "Ana".
+
+Ejercicio 3
+Encuentra todos los emails que terminen en "@gmail.com".
+
+Ejercicio 4
+Selecciona libros cuyo género sea exactamente "Novela".
+
+🚀 NIVEL INTERMEDIO
+Ejercicio 5
+Encuentra autores que tengan "García" en cualquier parte de su nombre.
+
+Ejercicio 6
+Busca clientes que vivan en ciudades que contengan "MA" (mayúsculas o minúsculas).
+
+Ejercicio 7
+Encuentra empleados que NO trabajen en el departamento de "Ventas".
+
+Ejercicio 8
+Selecciona libros publicados en los años 90 (1990-1999).
+
+💡 NIVEL AVANZADO
+Ejercicio 9
+Encuentra clientes que tengan un número de teléfono que empiece con "+34" (código de España).
+
+Ejercicio 10
+Busca libros que tengan exactamente 3 palabras en el título.
+
+Ejercicio 11
+Encuentra empleados cuyo puesto contenga "Senior" o "Junior".
+
+Ejercicio 12
+Selecciona clientes cuyo nombre tenga una "z" en la segunda letra.
+
+🏆 NIVEL EXPERTO
+Ejercicio 13
+Encuentra libros cuyo autor tenga un apellido compuesto (que contenga un guión).
+
+Ejercicio 14
+Busca empleados que ganen entre 2000 y 5000 Y cuyo departamento contenga "Tec" o "TI".
+
+Ejercicio 15
+Encuentra clientes que tengan en su email exactamente un punto antes del "@".
+
+Ejercicio 16
+Selecciona libros que tengan números en el título.
+
+🔥 DESAFÍOS EXTREMOS
+Ejercicio 17
+Crea una consulta que encuentre clientes cuyos nombres tengan al menos 3 vocales seguidas.
+
+Ejercicio 18
+Encuentra libros cuyo título empiece y termine con la misma letra.
+
+Ejercicio 19
+Busca empleados cuyo nombre tenga exactamente dos 'a' y al menos una 'e'.
+
+Ejercicio 20
+Crea una consulta que clasifique los libros en categorías según palabras clave en el título.
